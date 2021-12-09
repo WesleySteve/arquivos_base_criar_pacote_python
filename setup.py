@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 
-def read(filename):
+def ler(filename):
     return [req.strip() for req in open(filename).readlines()]
 
 
@@ -16,6 +16,6 @@ setup(
     description="arquivos_base_criar_pacote_python",
     packages=find_packages(),
     include_package_data=True,
-    install_requires=read("requirements.txt"),
-    extras_require={"dev": read("requirements-dev.txt")},
+    install_requires=ler("requirements.txt"),
+    extras_require={"dev": ler("requirements-dev.txt")},
 )
